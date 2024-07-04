@@ -11,6 +11,7 @@
 		DAB432462C2C662E00685017 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB432452C2C662E00685017 /* ContentView.swift */; };
 		DAB432482C2C663700685017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB432472C2C663700685017 /* Assets.xcassets */; };
 		DAB4324B2C2C663700685017 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB4324A2C2C663700685017 /* Preview Assets.xcassets */; };
+		DABEB08D2C327830001ECFAD /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEB08C2C327830001ECFAD /* DataViewModel.swift */; };
 		F685A0342C2DCC1400AC903F /* PlantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685A0332C2DCC1400AC903F /* PlantViewModel.swift */; };
 		F685A0362C2DE54000AC903F /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685A0352C2DE54000AC903F /* NavBar.swift */; };
 /* End PBXBuildFile section */
@@ -21,6 +22,7 @@
 		DAB432452C2C662E00685017 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DAB432472C2C663700685017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAB4324A2C2C663700685017 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DABEB08C2C327830001ECFAD /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
 		F685A0332C2DCC1400AC903F /* PlantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantViewModel.swift; sourceTree = "<group>"; };
 		F685A0352C2DE54000AC903F /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +63,7 @@
 				DAB432492C2C663700685017 /* Preview Content */,
 				F685A0332C2DCC1400AC903F /* PlantViewModel.swift */,
 				F685A0352C2DE54000AC903F /* NavBar.swift */,
+				DABEB08C2C327830001ECFAD /* DataViewModel.swift */,
 			);
 			path = SproutSpace;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				DAB432462C2C662E00685017 /* ContentView.swift in Sources */,
 				F685A0342C2DCC1400AC903F /* PlantViewModel.swift in Sources */,
 				DAB432442C2C662E00685017 /* SproutSpaceApp.swift in Sources */,
+				DABEB08D2C327830001ECFAD /* DataViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

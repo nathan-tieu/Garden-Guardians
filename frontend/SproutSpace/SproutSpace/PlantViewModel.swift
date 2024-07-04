@@ -39,7 +39,6 @@ class PlantViewModel: ObservableObject {
     @Published var plants = [Plant]() // if plants arr modified, any respective view will update
     
     func fetchPlantInfo() {
-        let apiKey = ""
         let urlString = "https://perenual.com/api/species-list?key=\(apiKey)"
         guard let url = URL(string: urlString) else { return }
         var request = URLRequest(url: url, timeoutInterval: Double.infinity)
