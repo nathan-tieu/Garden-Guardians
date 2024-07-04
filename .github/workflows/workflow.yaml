@@ -7,3 +7,5 @@ jobs:
     - name: API Key
       env:
         API_KEY: ${{ secrets.API_KEY }}
+      run: |
+        echo "API Key: $API_KEY"
