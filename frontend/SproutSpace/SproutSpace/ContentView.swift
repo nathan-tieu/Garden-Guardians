@@ -7,12 +7,13 @@
 
 import SwiftUI
 import UIKit
+import Foundation
 
 struct ContentView: View {
     @StateObject private var plantViewModel = PlantViewModel()
     @StateObject private var sensorViewModel = SensorViewModel()
     @State private var selectedTab: Tab = .house
-//    @State private var lastUpdated: Date? = nil
+    @State private var lastUpdated: String? = nil
     
     var body: some View {
         NavigationView {
@@ -49,6 +50,17 @@ struct ContentView: View {
                 
                 case .leaf:
                     VStack {
+                        Button(action: {
+                            lastUpdated = formattedDate(for: Date())
+                            sensorViewModel.fetchSensorData()
+                        }) {
+                            Text("Last updated: \(lastUpdated != nil ? "\(lastUpdated!)" : "Never")")
+                                .padding(10)
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(8)
+                        }
+                        
                         List {
                             Section(header: Text("Sunlight")) {
                                 Text(String(format: "IR: %.2f", sensorViewModel.sensor.ir))
@@ -78,7 +90,12 @@ struct ContentView: View {
                 NavBar(selectedTab: $selectedTab)
             }
         }
-
+    }
+    
+    private func formattedDate(for date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, yyyy h:mm a"
+        return formatter.string(from: date)
     }
 }
 
