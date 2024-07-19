@@ -14,6 +14,7 @@
 		DABEB08D2C327830001ECFAD /* SensorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEB08C2C327830001ECFAD /* SensorViewModel.swift */; };
 		F685A0342C2DCC1400AC903F /* PlantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685A0332C2DCC1400AC903F /* PlantViewModel.swift */; };
 		F685A0362C2DE54000AC903F /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685A0352C2DE54000AC903F /* NavBar.swift */; };
+		F6D969B82C4AF9340006BAE7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D969B72C4AF9340006BAE7 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		DABEB08C2C327830001ECFAD /* SensorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewModel.swift; sourceTree = "<group>"; };
 		F685A0332C2DCC1400AC903F /* PlantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantViewModel.swift; sourceTree = "<group>"; };
 		F685A0352C2DE54000AC903F /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		F6D969B72C4AF9340006BAE7 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				DAB432472C2C663700685017 /* Assets.xcassets */,
 				DAB432492C2C663700685017 /* Preview Content */,
 				F685A0332C2DCC1400AC903F /* PlantViewModel.swift */,
+				F6D969B72C4AF9340006BAE7 /* Config.swift */,
 				F685A0352C2DE54000AC903F /* NavBar.swift */,
 				DABEB08C2C327830001ECFAD /* SensorViewModel.swift */,
 			);
@@ -151,6 +154,7 @@
 				F685A0342C2DCC1400AC903F /* PlantViewModel.swift in Sources */,
 				DAB432442C2C662E00685017 /* SproutSpaceApp.swift in Sources */,
 				DABEB08D2C327830001ECFAD /* SensorViewModel.swift in Sources */,
+				F6D969B82C4AF9340006BAE7 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
