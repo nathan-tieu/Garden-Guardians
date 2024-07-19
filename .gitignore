@@ -1,0 +1,12 @@
+# Ignore the Config.swift file
+frontend/SproutSpace/SproutSpace/Config.swift
+
+# Ignore .DS_Store files (macOS specific)
+**/.DS_Store
+
+# Ignore user-specific Xcode files
+frontend/SproutSpace/SproutSpace.xcodeproj/xcuserdata/
+frontend/SproutSpace/SproutSpace.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Ignore UserInterfaceState.xcuserstate
+**/UserInterfaceState.xcuserstate
