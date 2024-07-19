@@ -5,6 +5,7 @@
 //  Created by nathan tieu on 6/26/24.
 //
 
+import Foundation
 import SwiftUI
 
 @main
