@@ -12,6 +12,7 @@
 		DAB432482C2C663700685017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB432472C2C663700685017 /* Assets.xcassets */; };
 		DAB4324B2C2C663700685017 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB4324A2C2C663700685017 /* Preview Assets.xcassets */; };
 		DABEB08D2C327830001ECFAD /* SensorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEB08C2C327830001ECFAD /* SensorViewModel.swift */; };
+		F63253D92C4C2D4F00D3E2FA /* PlantInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63253D82C4C2D4F00D3E2FA /* PlantInfoView.swift */; };
 		F685A0342C2DCC1400AC903F /* PlantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685A0332C2DCC1400AC903F /* PlantViewModel.swift */; };
 		F685A0362C2DE54000AC903F /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685A0352C2DE54000AC903F /* NavBar.swift */; };
 		F6D969B82C4AF9340006BAE7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D969B72C4AF9340006BAE7 /* Config.swift */; };
@@ -24,6 +25,7 @@
 		DAB432472C2C663700685017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAB4324A2C2C663700685017 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DABEB08C2C327830001ECFAD /* SensorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewModel.swift; sourceTree = "<group>"; };
+		F63253D82C4C2D4F00D3E2FA /* PlantInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoView.swift; sourceTree = "<group>"; };
 		F685A0332C2DCC1400AC903F /* PlantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantViewModel.swift; sourceTree = "<group>"; };
 		F685A0352C2DE54000AC903F /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		F6D969B72C4AF9340006BAE7 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				DAB432432C2C662E00685017 /* SproutSpaceApp.swift */,
 				DAB432452C2C662E00685017 /* ContentView.swift */,
+				F63253D82C4C2D4F00D3E2FA /* PlantInfoView.swift */,
 				DAB432472C2C663700685017 /* Assets.xcassets */,
 				DAB432492C2C663700685017 /* Preview Content */,
 				F685A0332C2DCC1400AC903F /* PlantViewModel.swift */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F63253D92C4C2D4F00D3E2FA /* PlantInfoView.swift in Sources */,
 				F685A0362C2DE54000AC903F /* NavBar.swift in Sources */,
 				DAB432462C2C662E00685017 /* ContentView.swift in Sources */,
 				F685A0342C2DCC1400AC903F /* PlantViewModel.swift in Sources */,

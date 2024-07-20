@@ -28,36 +28,40 @@ struct ContentView: View {
                     ScrollView {
                         LazyVGrid(columns: columns) {
                             ForEach(plantViewModel.plants) { plant in
-                                VStack(alignment: .leading) {
-                                    if let imageUrlString = plant.defaultImage?.small_url,
-                                       let imageUrl = URL(string: imageUrlString) {
-                                        AsyncImage(url: imageUrl) { image in
-                                            image
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fill)
-                                                .frame(height: 150)
-                                                .clipped()
-                                        } placeholder: {
-                                            ProgressView()
-                                        }
-                                        .frame(height: 150)
-                                        .cornerRadius(8)
-                                    } else {
-                                        Color.gray
+                                NavigationLink(destination: PlantInfoView(plant:plant)) {
+                                    VStack(alignment: .leading) {
+                                        if let imgUrlString = plant.defaultImage?.small_url,
+                                           let imgUrl = URL(string: imgUrlString) {
+                                            AsyncImage(url: imgUrl) { image in
+                                                image
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fill)
+                                                    .frame(height: 150)
+                                                    .clipped()
+                                            } placeholder: {
+                                                ProgressView()
+                                            }
                                             .frame(height: 150)
-                                            .cornerRadius(2)
+                                            .cornerRadius(8)
+                                        } else {
+                                            Color.gray
+                                                .frame(height: 150)
+                                                .cornerRadius(2)
+                                        }
+                                        
+                                        Text(plant.commonName)
+                                            .foregroundStyle(.black)
+                                            .font(.headline)
+                                            .lineLimit(1)
+                                        
+                                        Text("Watering: " + plant.watering)
+                                            .foregroundStyle(.black)
+                                            .font(.subheadline)
+                                            .lineLimit(1)
                                     }
-                                    
-                                    Text(plant.commonName)
-                                        .font(.headline)
-                                        .lineLimit(1)
-                                    
-                                    Text("Watering: " + plant.watering)
-                                        .font(.subheadline)
-                                        .lineLimit(1)
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.bottom, 8)
                                 }
-                                .frame(maxWidth: .infinity)
-                                .padding(.bottom, 8)
                             }
                         }
                         .padding()
