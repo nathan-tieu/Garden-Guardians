@@ -15,39 +15,63 @@ struct ContentView: View {
     @State private var selectedTab: Tab = .house
     @State private var lastUpdated: String? = nil
     
+    private let columns = [
+        GridItem(.flexible(), spacing: 20),
+        GridItem(.flexible(), spacing: 20),
+    ]
+    
     var body: some View {
         NavigationView {
             VStack {
                 switch selectedTab {
                 case .house:
-                    List(plantViewModel.plants) { plant in
-                        VStack(alignment: .leading) {
-                            Text(plant.commonName)
-                                .font(.headline)
-                            Text("Watering Requirements: " + plant.watering)
-                                .font(.subheadline)
-                            if let imageUrlString = plant.defaultImage?.small_url,
-                               let imageUrl = URL(string: imageUrlString) {
-                                AsyncImage(url: imageUrl) {
-                                    image in image
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                } placeholder: {
-                                    ProgressView()
+                    ScrollView {
+                        LazyVGrid(columns: columns) {
+                            ForEach(plantViewModel.plants) { plant in
+                                VStack(alignment: .leading) {
+                                    if let imageUrlString = plant.defaultImage?.small_url,
+                                       let imageUrl = URL(string: imageUrlString) {
+                                        AsyncImage(url: imageUrl) { image in
+                                            image
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fill)
+                                                .frame(height: 150)
+                                                .clipped()
+                                        } placeholder: {
+                                            ProgressView()
+                                        }
+                                        .frame(height: 150)
+                                        .cornerRadius(8)
+                                    } else {
+                                        Color.gray
+                                            .frame(height: 150)
+                                            .cornerRadius(2)
+                                    }
+                                    
+                                    Text(plant.commonName)
+                                        .font(.headline)
+                                        .lineLimit(1)
+                                    
+                                    Text("Watering: " + plant.watering)
+                                        .font(.subheadline)
+                                        .lineLimit(1)
                                 }
-                                .frame(height: 200)
-                            } else {
-                                ProgressView()
-                                    .frame(height: 200)
+                                .frame(maxWidth: .infinity)
+                                .padding(.bottom, 8)
                             }
                         }
-                        .padding(.vertical, 8)
+                        .padding()
                     }
-                    .navigationTitle("Plants")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            Text("Recommended Plants")
+                                .font(.title2) // Smaller font size
+                        }
+                    }
                     .onAppear {
                         plantViewModel.fetchPlantInfo()
                     }
-                
                 case .leaf:
                     VStack {
                         Button(action: {
@@ -77,8 +101,13 @@ struct ContentView: View {
                             }
                         }
                         .listStyle(.insetGrouped)
-                        .navigationTitle("Sensor Data")
-                        .onAppear {
+                        .navigationBarTitleDisplayMode(.inline)
+                        .toolbar {
+                            ToolbarItem(placement: .principal) {
+                                Text("Sensor Data")
+                                    .font(.title2) // Smaller font size
+                            }
+                        }                        .onAppear {
                             sensorViewModel.fetchSensorData()
                         }
                     }
